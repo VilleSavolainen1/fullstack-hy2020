@@ -1,0 +1,8 @@
+Selain lähettää palvelimelle pyynnön joka sisältää JSON-muodossa olevan muistiinpanon
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+palvelin->selain: 201 created
+
+Muita HTTP-pyyntöjä ei suoriteta
+
+Lomakkeen tietojen lähettämisen hoitaa selaimen lataamassa JS-tiedostossa oleva koodi. 

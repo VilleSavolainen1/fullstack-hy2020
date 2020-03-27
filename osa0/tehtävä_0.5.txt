@@ -1,0 +1,18 @@
+Selain pyytää palvelimelta HTML-koodia
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+
+Palvelin lähettää HTML-koodin
+palvelin->selain: HTML koodi
+
+Selain alkaa suorittaa HTML-koodia joka pyytää main.css ja spa.js tiedostoja
+selain->palvelin:HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: CSS-koodi
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+palvelin->selain: JS-koodi
+
+Selain alkaa suorittaa JS-koodia joka pyytää .json tiedostoa
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+
+palvelin->selain: data.json tiedosto
+
+Selain suorittaa data.json tiedoston

@@ -1,0 +1,27 @@
+Selain lähettää palvelimelle tekstikentän syötteen kun nappia painetaan
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+
+Palvelin vastaa pyyntöön statuskoodilla 302, joka tarkoittaa uudelleennohjausta, eli kehottaa
+selainta tekemään uuden HTTP GET-pyynnön osoitteeseen /notes
+palvelin->selain: HTML koodi
+
+Selain pyytää HTML-koodin joka käskee lataamaan main.css ja main.js tiedostot
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+
+Palvelin lähettää .css ja .js-tiedostot
+palvelin->selain: .css ja .js
+
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: CSS koodi
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+palvelin->selain: JS koodi
+
+Selain alkaa suorittaa js-koodia joka pyytää data.json tiedostoa
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+
+Palvelin lähettää JSON datan
+palvelin->selain: JSON data
+
+Selain suorittaa tapahtumankäsittelijän
+joka renderöi muistiinpanot näytölle
